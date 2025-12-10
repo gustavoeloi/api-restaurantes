@@ -40,7 +40,7 @@ class TablesSessionsController {
         opened_at: knex.fn.now(),
       });
 
-      return response.status(201).json({});
+      return response.status(201).json();
     } catch (error) {
       next(error);
     }
@@ -72,7 +72,7 @@ class TablesSessionsController {
         })
         .where({ id });
 
-      return response.json(session);
+      return response.json();
     } catch (error) {
       next(error);
     }
